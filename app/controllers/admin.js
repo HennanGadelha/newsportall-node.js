@@ -4,13 +4,10 @@ module.exports.addNoticia = function(app, req, res){
 
 }
 
-
 module.exports.salvarNoticia = function(app, req,res){
 
     let noticia = req.body
         
-   
-
     let conn = app.config.dbConnection();
     let noticiasModel = new app.app.models.NoticiasDAO(conn);
 
@@ -19,7 +16,5 @@ module.exports.salvarNoticia = function(app, req,res){
         res.redirect('/noticias');
         
     });
-
-
 
 }
