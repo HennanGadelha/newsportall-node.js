@@ -11,6 +11,9 @@ app.set('views', './app/views');
 //config body parser
     app.use(bodyParser.urlencoded({extended: false}));
 
+//mapeando arquivos estaticos
+
+    app.use(express.static('./app/public'));
 
 // realizando auto-loads
     consign().include('app/routes')
